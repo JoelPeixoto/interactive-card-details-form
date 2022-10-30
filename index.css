@@ -43,11 +43,21 @@ main {
   }
 
   .cards-display {
-    height: auto;
+    height: 40%;
+    justify-content: unset;
+    position: relative;
     width: 100%;
   }
   .card-back {
     display: flex;
+    position: absolute;
+  }
+
+  .card-front {
+    position: relative;
+    align-self: flex-end;
+    margin: auto 0;
+    z-index: 1;
   }
 
   .card-back > img {
