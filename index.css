@@ -3,7 +3,7 @@
 body {
   background-image: url("./images/bg-main-desktop.png");
   background-repeat: no-repeat;
-  background-size: 35vw 100vh;
+  background-size: 30vw 100vh;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 18px;
 }
@@ -17,15 +17,23 @@ main {
 }
 
 .cards-display {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-evenly;
-  width: 50%;
+  position: relative;
+  height: 52vh;
+  width: 40vw;
 }
 
 .card-back {
-  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.test {
+  position: absolute;
+  color: white;
+  top: 45%;
+  right: 12%;
+  font-size: 0.8em;
 }
 
 @media only screen and (max-width: 700px) {
@@ -43,28 +51,41 @@ main {
   }
 
   .cards-display {
-    height: 40%;
-    justify-content: unset;
+    height: 30vh;
     position: relative;
-    width: 100%;
+    width: 90vw;
   }
   .card-back {
-    display: flex;
     position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .card-front {
-    position: relative;
-    align-self: flex-end;
-    margin: auto 0;
+    position: absolute;
+    bottom: 0;
     z-index: 1;
   }
 
-  .card-back > img {
-    margin-left: auto;
+  .card-front > img, .card-back > img {
+    width: 75vw;
   }
 
-  .card-front > img, .card-back > img {
-    width: 75%;
+  .test {
+    top: 28%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-size: 100vw 25vh;
+  }
+
+  .cards-display {
+    height: 24vh;
+  }
+
+  .test {
+    font-size: 0.6em;
   }
 }
